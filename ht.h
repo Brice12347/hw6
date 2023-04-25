@@ -315,9 +315,8 @@ HashTable<K,V,Prober,Hash,KEqual>::HashTable(
 template<typename K, typename V, typename Prober, typename Hash, typename KEqual>
 HashTable<K,V,Prober,Hash,KEqual>::~HashTable()
 {
-    while(size_ != 0){
+    while(int(table_.size()) != 0){
         table_.pop_back();
-				size_--;
     }
 }
 
